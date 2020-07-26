@@ -1,4 +1,4 @@
-# Springboot,RESTAPI,Hibernate,JPA :hotsprings: 
+# Springboot with CRUD EXAMPLE :hotsprings: 
 ## Spring boot application that the usage of RESTful API using Spring boot, Hibernate,JPA and MySQL.
 
 ## used tools :man:
@@ -39,4 +39,10 @@ create TABLE tbl_employee(
 <details>
 <summary>get with id_value 🥬   </summary>
 <img src=https://user-images.githubusercontent.com/40031858/88458160-01aab580-cec7-11ea-8c0a-13bb549c1a63.png width=600px>
+</details>
+
+
+<details>
+<summary>delete test 🔧    </summary>
+<img src=https://user-images.githubusercontent.com/40031858/88478308-4182a300-cf82-11ea-85cf-8d346827785f.png width=600px>
 </details>
