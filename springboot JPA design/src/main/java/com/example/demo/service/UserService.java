@@ -3,6 +3,10 @@ package com.example.demo.service;
 import com.example.demo.dao.UserRepository;
 import com.example.demo.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -26,5 +30,33 @@ public class UserService {
     }
     public List<User> getUser(){
         return repository.findAll();
+    }
+
+    public List<User> getUserByJob(String job){
+        return repository.findByJob(job);
+    }
+    public long getCounts(int age){
+        return repository.countByAge(age);
+    }
+
+    public List<User> deleteUser(String name){
+        return repository.deleteByName(name);
+    }
+    public List<User> getCareerUser(int career){
+        return repository.findByCareer(career);
+    }
+
+    public List<User> findByMultiCondition(String job,int age){
+        return repository.findByJobAndAge(job,age);
+    }
+
+    public List<User> findByIgnoreCondition(String job){
+        return repository.findByJobIgnoreCase(job);
+    }
+    public List<User> getUserSort(String field){
+         return repository.findAll(Sort.by(field));
+    }
+    public List<User> getUsersCustomQuery(){
+        return repository.getUserQuery();
     }
 }
